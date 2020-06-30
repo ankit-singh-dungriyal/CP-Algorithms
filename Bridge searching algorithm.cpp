@@ -32,7 +32,7 @@ void dfs(ll n,ll pr){
     {
       dfs(x,n);
       low[n]=min(low[n],low[x]);
-      if(low[x]>low[n]){
+      if(low[x]>in[n]){
         bridge.pb(mp(n,x));
       }
     }
