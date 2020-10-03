@@ -105,7 +105,8 @@ void delete_node(node* &root,int val){
             root=root->r;
         }
         else{
-            par->r=curr->r;
+        	if(par->r==curr)par->r=curr->r;
+        	else par->l=curr->r;
             min_succ->l=curr->l;
         }
         free(curr);
@@ -150,8 +151,10 @@ while(t--)
     //  Enter value to node to be deleted:
     int p;
     cin>>p;
-    // wr(root->data)
+//     cout<<"\n";
+    
     delete_node(root,p);
+    // wr(root->data)
     cout<<"\n";
     show(root);
 }
