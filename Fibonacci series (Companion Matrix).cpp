@@ -1,4 +1,5 @@
 // Fibonacci series (Companion Matrix)
+// Here series started from 0 i.e(0,1,1,2,3,5,8,13.....) . Hence first element is 0.
 
 // By 'Anki'
 
@@ -57,7 +58,7 @@ while(t--)
     ll n;
     cin>>n;
     ll a[2][2]={{1,1},{1,0}};
-    if(n==1)cout<<0<<"\n";
+    if(n<=1)cout<<0<<"\n";
     else if(n==2)cout<<1<<"\n";
     else cout<<power(a,n-2)<<"\n";
     
